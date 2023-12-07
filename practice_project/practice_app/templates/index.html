@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{%load static %}
+
+{% block content%}
+
+{% comment %} <h1 class="text-center">this is home</h1> {% endcomment %}
+<div class="row">
+    {% for i in meals %}
+
+    <div class="col-md-4 mb-4">
+        <div class="card" style="width: 18rem;">
+            <img src="{{i.strMealThumb}}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{i.strMeal}}</h5>
+            <p class="card-text">This is a longer card with supporting text
+                below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+            <a href="#" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+
+{%endblock%}
